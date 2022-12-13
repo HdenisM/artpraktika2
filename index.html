@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Плакат</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <style>
+/* "сетка" экрана */
+      .all{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 250%;
+        position: absolute;
+        background-color: rgb(28,28,28);
+      }
+/* стили колонн */
+  /* стили колонны с2 */
+      .c2hidden{
+        width: 220px;
+        height: 100%;
+        overflow: hidden;
+      }
+      .c2{
+        position: relative;
+        width: 20px;
+        height: 100%;
+        display: flex;
+        top: 0px;
+        font-family: 'Mewerek';
+        font-size: 100px;
+        color: white;
+        transition-property: all;
+        transition: all ease .6s;
+
+      }
+      .scroll2{
+        animation: scroll2 7s linear infinite;
+      }
+      .c2:hover {
+        animation-play-state: paused;
+        transform: translateY(30px);
+
+      }
+
+/* стили шаров */
+  /* стили синего шара */
+      .b1 {
+        position: relative;
+        margin: 0 auto;
+        right: 40px;
+        top: 400px;
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background-color: rgb(00,183,255);
+      }
+  /* стили красного шара */
+      .b2 {
+        position: relative;
+        margin: 0 auto;
+        top: -50px;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: rgb(244,55,69);
+      }
+      .b2orbita {
+        position: relative;
+        margin: 0 auto;
+        top: -75px;
+        right: 75px;
+        width: 350px;
+        height: 350px;
+        opacity: 0%;
+        transition: 0.5s;
+      }
+      .b2orbita:hover{
+        opacity: 100%;
+      }
+      .orbit {
+          animation: orbit 5s linear infinite;
+      }
+/* стили текстовых блоков */
+  /* стили блока bl1 */
+      .bl1hidden{
+        position: relative;
+        margin-right: 1px;
+        width: 160px;
+        height: 220px;
+        overflow: hidden;
+      }
+      .bl1{
+        position: relative;
+        display: flex;
+        width: 200px;
+        height: 40px;
+        font-family: 'Qanelas';
+        font-weight: bold;
+        font-style: italic;
+        font-size: 20px;
+        color: white;
+        top: 100px;
+        left: 500px;
+      }
+      .bl2{
+        position: relative;
+        display: flex;
+        width: 200px;
+        height: 40px;
+        font-family: 'Qanelas';
+        font-weight: bold;
+        font-style: italic;
+        font-size: 20px;
+        color: white;
+        top: 100px;
+        left: 500px;
+      }
+      .bl3{
+        position: relative;
+        display: flex;
+        width: 200px;
+        height: 40px;
+        font-family: 'Qanelas';
+        font-weight: 900;
+        font-style: italic;
+        font-size: 30px;
+        color: white;
+        top: 100px;
+        left: 500px;
+      }
+      .slide{
+        animation: 5s slide 2s linear infinite;
+      }
+      .slide2{
+        animation: 5s slide2 3s linear infinite;
+      }
+      .slide3{
+        animation: 5s slide3 4s linear infinite;
+      }
+/* анимация */
+  /* анимация колонны с2 */
+      @keyframes scroll2 {
+        0% {top: 10px;}
+        100% {top: -2590px;}
+      }
+  /* анимация красного шара */
+      @keyframes orbit {
+        100% {
+          rotate: 360deg;}
+      }
+  /* анимация красного шара */
+      @keyframes slide{
+        0% {left: 500px;}
+        50% {left: 0px; opacity: 100%}
+        100% {left: 0px; opacity: 0%}
+      }
+      @keyframes slide2{
+        0% {left: 500px;}
+        50% {left: 0px; opacity: 100%}
+        100% {left: 0px; opacity: 0%}
+      }
+      @keyframes slide3{
+        0% {left: 500px;}
+        50% {left: 0px; opacity: 100%}
+        100% {left: 0px; opacity: 0%}
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="all">
+
+      <!-- колонны символов -->
+      <div class="c2hidden">
+        <div class="c2 scroll2">
+          B<br> D<br> C<br> E<br> Q<br> F<br> L<br> A<br> H<br> J<br> K<br> S<br> A<br> B<br> D<br> C<br> E<br> Q<br> F<br> L<br> A<br> H<br> J<br> K<br> S<br> A<br> B<br> D<br> C<br> E<br> Q<br> F<br> L<br> A<br> H<br> J<br> K<br> S<br> A<br> B<br> D<br> C<br> E<br> Q<br> F<br> L<br> A<br> H<br> J<br> K<br> S<br> A<br> B<br> D<br> C<br> E<br> Q<br> F<br> L<br> A<br> H<br> J<br> K<br> S<br> A<br> B<br> D<br> C<br> E<br> Q<br> F<br> L<br> A<br> H<br> J<br> K<br> S<br> A<br> B<br> D<br> C<br> E<br> Q<br> F<br> L<br> A<br> H<br> J<br> K<br> S<br> A<br> B<br> D<br> C<br> E<br> Q<br> F<br> L<br> A<br> H<br> J<br> K<br> S<br> A<br>
+        </div>
+      </div>
+
+      <!-- шары -->
+      <div class="b1">
+        <div class="b2orbita  orbit">  <div class="b2"></div> </div>
+      </div>
+
+      <!-- блоки текста -->
+      <div class="bl1hidden">
+        <div class="bl1 slide">
+          ПОЗДРАВЛЯЕМ!
+        </div>
+        <div class="bl2 slide2">
+          ВЫ НАШЛИ
+        </div>
+        <div class="bl3 slide3">
+          ЗАКУТОК
+        </div>
+      </div>
+
+
+  </body>
+</html>
